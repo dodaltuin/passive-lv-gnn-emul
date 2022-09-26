@@ -72,7 +72,7 @@ from absl import logging
 
 flags.DEFINE_enum('mode', 'train', ['train', 'evaluate'], help = 'Fit model to training data or evaluate on test data')
 flags.DEFINE_integer('n_epochs', 300, lower_bound = 1, help = 'Number of epochs to train the model for')
-flags.DEFINE_string('data_path', 'beamData4NonAugmented', help = 'Name of sub-directory in "/data" where simulation data is stored')
+flags.DEFINE_string('data_path', 'beamData', help = 'Name of sub-directory in "/data" where simulation data is stored')
 flags.DEFINE_string('trained_params_dir', "None", help='Path to directory with pre-trained network parameters')
 flags.DEFINE_boolean('fixed_geom', False, help='Set whether the dataset is for varying or fixed geometries')
 flags.DEFINE_float('lr', 5e-5, lower_bound=0, help='Learning rate for training the network')

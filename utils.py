@@ -248,7 +248,6 @@ def init_fixed_geom_emulator(model, params, data_loader, results_save_dir, train
     if os.path.isfile(trained_params_dir + 'latent_nodal_values.npy'):
         model_fg, params_fg = init_fixed_geom_emulator_from_fixed(trained_params_dir, results_save_dir, model, data_loader)
     else:
-        print(f'here now')
         model_fg, params_fg = init_fixed_geom_emulator_from_varying(results_save_dir, model, params, data_loader)
 
     return model_fg, params_fg
